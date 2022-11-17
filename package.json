@@ -15,7 +15,6 @@
     "v-calendar": "^2.4.1",
     "vue": "^2.6.11",
     "vue-drag-select": "^0.2.0",
-    "vue-mj-daterangepicker": "^0.1.11",
     "vue-moment": "^4.1.0",
     "vue-router": "^3.5.3",
     "vuetify": "^2.6.0",
