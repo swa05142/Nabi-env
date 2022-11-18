@@ -9,8 +9,17 @@ before_install:
   - echo "start Creating an image with docker file"
   - docker build -t swa05142/docker-vue-app -f Dockerfile.dev .
 
-script:
-  - docker run -e CI=true swa05142/docker-vue-app npm run test -- --coverage
+# script:
+#   - docker run -e CI=true swa05142/docker-vue-app npm run test -- --coverage
 
-after_success:
-  - echo "Test Success"
+deploy:
+  provider: elasticbeanstalk
+  region: "ap-northeast-1"
+  app: "docker-vue-app"
+  env: "Nabi-env"
+  bucket_name: "elasticbeanstalk-ap-northeast-1-710107323718"
+  bucket_path: "docker-vue-app"
+  on:
+    branch: main
+access_key_id: $AWS_ACCESS_KEY
+secret_access_key: $AWS_SECRET_ACCESS_KEY
