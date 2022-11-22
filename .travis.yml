@@ -18,7 +18,7 @@ deploy:
   provider: elasticbeanstalk
   region: "ap-northeast-1"
   app: "Nabi"
-  env: "Nabi-env"
+  env: "Nabi-env-1"
   bucket_name: "elasticbeanstalk-ap-northeast-1-710107323718"
   bucket_path: "Nabi"
   on:
