@@ -7,12 +7,12 @@ services:
 
 before_install:
   - echo "start Creating an image with docker file"
-  # - docker build -t swa05142/docker-vue-app -f Dockerfile.dev .
+  - docker build -t swa05142/docker-vue-app -f Dockerfile.dev .
 
 script:
-  #   - docker run -e CI=true swa05142/docker-vue-app npm run test -- --coverage
+  - docker run -e CI=true swa05142/docker-vue-app npm run test -- --coverage
   #test
-  - docker build -t swa05142/docker-vue-app
+  #- docker build -t swa05142/docker-vue-app
 
 deploy:
   edge: true
