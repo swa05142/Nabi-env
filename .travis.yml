@@ -10,7 +10,7 @@ before_install:
   - docker build -t swa05142/docker-vue-app -f Dockerfile.dev .
 
 script:
-  - npm run build
+  - npm run dist
 
 deploy:
   edge: true
