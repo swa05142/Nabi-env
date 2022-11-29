@@ -6,6 +6,8 @@ COPY ./ ./
 RUN npm run build
 
 FROM nginx:stable-alpine as production-stage
+RUN '/usr/src/app'
 EXPOSE 80
 COPY --from=build-stage /usr/src/app/dist /usr/share/nginx/html
-CMD [ "nginx", "-g", "daemon off;" ]
+COPY nginx.conf /etc/nginx/nginx.conf 
+RUN service nginx restart
