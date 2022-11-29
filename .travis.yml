@@ -10,7 +10,7 @@ before_install:
   - docker build -t swa05142/docker-vue-app -f Dockerfile.dev .
 
 script:
-  - docker build -t swa05142/docker-vue-app ./frontend
+  - docker build -t swa05142/docker-vue-app .
   - echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_ID" --password-stdin
   - docker push swa05142/docker-vue-app
 
