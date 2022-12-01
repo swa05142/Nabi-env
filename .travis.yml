@@ -17,10 +17,10 @@ script:
 deploy:
   edge: true
   provider: elasticbeanstalk
-  region: "ap-northeast-1"
+  region: "ap-northeast-2"
   app: "Nabi"
-  env: "Nabi-env-1"
-  bucket_name: "elasticbeanstalk-ap-northeast-1-710107323718"
+  env: "Nabi-env"
+  bucket_name: "elasticbeanstalk-ap-northeast-2-710107323718"
   bucket_path: "Nabi"
   on:
     branch: main
