@@ -1,12 +1,8 @@
 {
-    "AWSEBDockerrunVersion": 2,
-    "containerDefinitions": [
-        {
-            "name": "frontend",
-            "image": "swa05142/docker-vue-app",
-            "hostname": "frontend",
-            "essential": false,
-            "memory": 128
-        }
-    ]
-}
+    "AWSEBDockerrunVersion": "1",
+    "Logging": "/usr/src/app",
+    "Image": {
+        "Update": "false"
+    }
+  }
+  
