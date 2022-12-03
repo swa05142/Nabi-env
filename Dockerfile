@@ -6,6 +6,6 @@ COPY ./ ./
 RUN npm run build
 
 FROM nginx:stable-alpine as production-stage
-EXPOSE 8080
+EXPOSE 80
 COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
 COPY --from=build-stage /usr/src/app/dist /usr/share/nginx/html
